@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgb(255, 255, 255)), url(../assets/background/om2.jpg);
+  background-repeat: repeat;
+  position: relative;
+  min-height: 83vh;
+}
+
+/* Fuentes */
+@font-face {
+  font-family: "saman";
+  src: url(../assets/fonts/SAMAN___.TTF);
+}
+main {
+  font-family: "Laila", sans-serif;
+  display: flex;
+  margin: 0 5% 0 5%;
+  font-size: 18px;
+}
+
+Form {
+  color: #fff;
+  text-shadow: 2px 1px #000000, -1px -1px 3px #000000;
+}
+
+h1 {
+  align-items: center;
+  font-size: 65px;
+  text-shadow: 2px 1px 3px #000000;
+  font-family: "saman";
+  border: 0;
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  margin: 50px 0 15px 5%;
+  color: #000000;
+  text-shadow: none;
+  text-shadow: 2px 1px 3px #fff, 0px -0.1px 3px #fff;
+}
+
+/* Navegador */
+nav {
+  width: 95%;
+  margin: auto;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  --bs-link-hover-color: map-get($estilos, blanco);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+nav a img {
+  width: 150px;
+  --bs-link-hover-color: map-get($estilos, blanco);
+}
+
+nav ul li {
+  list-style: none;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 23px;
+  display: inline-block;
+  margin: 0 25px;
+  position: relative;
+  text-shadow: 7px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 2px 1px 3px #000000, 0px -0.1px 3px gray;
+  --bs-link-hover-color: map-get($estilos, blanco);
+}
+
+nav ul li::before {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.4s ease-out;
+  box-shadow: 2px 2px 5px #000000;
+}
+
+nav ul li:hover::before {
+  width: 100%;
+}
+
+/* Nav-Bootstrap */
+.nav-item {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 2px 1px 3px #000000, 0px -0.1px 3px #808080;
+  --bs-link-hover-color: map-get($estilos, blanco);
+}
+
+.bg-light {
+  --bs-bg-opacity: 0;
+}
+
+.navbar-toggler-icon {
+  background-color: orange;
+  border-radius: 4px;
+}
+
+#navbarNav {
+  justify-content: end;
+}
+
+/* Index */
+.contenedorIndex {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/background/sumieindexs.jpg);
+  background-size: cover;
+}
+
+/* Frase del Index */
+.frasesection {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+}
+
+.frasearticle {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 15px #808080;
+}
+
+.pindex {
+  font-family: "Cinzel Decorative", cursive;
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.pmons {
+  font-family: "Caveat", cursive;
+  font-size: 35px;
+  text-align: right;
+}
+
+/* Tabla */
+table {
+  width: 40%;
+  margin: 5% auto 0 auto;
+}
+
+th {
+  background-color: #8b008b;
+  color: #fff;
+}
+
+td {
+  background-color: #fff;
+}
+
+/* Instructora */
+.sobremi {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.sobremi img {
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.parrafos-instructora {
+  width: 60%;
+  background-color: rgba(139, 0, 139, 0.042);
+  padding: 30px;
+  border-radius: 9px;
+  box-shadow: 1px 1px 2px 1px gray;
+}
+
+.maestros {
+  display: flex;
+  justify-content: center;
+}
+.maestros img {
+  height: auto;
+  width: 250px;
+  border-radius: 9px;
+  box-shadow: 1px 1px 2px 1px #808080;
+  margin-top: 50px;
+}
+
+.fotosmaestros {
+  display: flex;
+  align-items: flex-end;
+  margin: 50px auto 100px auto;
+}
+
+.nombremaestro {
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: indigo;
+}
+
+.titulopequeno {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Historia */
+.historiaky {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+.historiaimg {
+  border-radius: 9px;
+  width: 500px;
+}
+
+.textofotohistoria {
+  margin-left: 50px;
+  margin-right: auto;
+  font-weight: bold;
+  width: 60%;
+  background-color: rgba(139, 0, 139, 0.042);
+  padding: 30px;
+  border-radius: 9px;
+  box-shadow: 1px 1px 2px 1px #808080;
+}
+
+/* Contacto */
+.contenedorcontacto {
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/background/sumiecontacto.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.postfooter {
+  height: 120px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+form {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px #808080;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../assets/background/MANDALAROSA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  color: azure;
+}
+
+form legend h2 {
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.contactomargin {
+  margin-top: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactoradio {
+  display: flex;
+}
+.contactoradio input {
+  margin-left: 15px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 200px;
+  border-radius: 9px;
+  margin: 35px 30px 30px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  border: 2px solid #8b008b;
+}
+
+button:hover {
+  background: #8b008b;
+}
+
+input {
+  border: 2px solid #8b008b;
+  border-radius: 9px;
+}
+
+textarea {
+  border: 2px solid #8b008b;
+  border-radius: 9px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  bottom: 5px;
+  justify-content: center;
+  position: absolute;
+}
+
+footer a img {
+  width: 70px;
+  transition: all 300ms;
+  margin-inline: 15px;
+  bottom: 2px;
+}
+
+footer a img:hover {
+  transform: scale(1.15);
+}
+
+.adorno {
+  height: 65px;
+}
+
+/* Footer Index */
+.footerindex {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  justify-items: center;
+}
+
+.insta, .whatsapp, .face {
+  width: 65px;
+  bottom: 0;
+}
+
+.face {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=estilos.css.map */
+
+
+/* Media Queries */
+
+ @media only screen and (max-width:768px){
+
+ }
+
+@media only screen and (max-width:576px){
+
+    /* General */
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 5%;
+        width: 90%;
+    }
+
+
+    nav ul {
+        justify-content: space-around;
+        text-align: center;
+        width: 90%;
+
+    }
+
+    nav a img {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* Index */
+
+
+
+    .frasesection {
+        margin: 0px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .frasearticle {
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 25px;
+        border-radius: 9px;
+        box-shadow: 2px 2px 15px grey;
+    }
+
+    .pindex {
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .pmons {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    /* Clases */
+
+    table {
+        width: 100%;
+        margin: 10% 0 0 0;
+    }
+
+    /* Instructora */
+
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobremi img{
+        margin-bottom: 40px;
+    }
+
+    .maestros{
+        display: flex;
+        flex-direction: column;       
+    }
+
+    .parrafos-instructora{
+        text-align: center;
+        width: 90%;      
+    }
+
+    /* Historia */
+
+    .historiaimg {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .historiaky{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+    /* Contacto */
+
+    form {
+        width: 85%;
+    }
+
+    /*  Footer    */
+
+    .adorno{
+        height: 0px;
+        width: 0px;
+    }
+  }

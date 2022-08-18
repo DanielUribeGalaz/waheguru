@@ -1,0 +1,428 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$colorPrincipal: #8b008b;
+
+$bordeRedondo: 9px;
+
+$estilos: (
+    blanco: #fff,
+    negro: #000000,
+    gris: #808080,
+);
+
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgb(255, 255, 255)), url(../assets/background/om2.jpg);
+    background-repeat: repeat;
+    position: relative;
+    min-height: 83vh;
+}
+
+/* Fuentes */
+
+@font-face {
+    font-family: "saman";
+    src: url(../assets/fonts/SAMAN___.TTF);
+}
+
+main{
+    font-family: 'Laila', sans-serif;
+    display: flex;
+    margin: 0 5% 0 5%;
+    font-size: 18px;
+}
+
+Form{
+color: map-get($estilos, blanco);
+text-shadow: 2px 1px map-get($estilos, negro), -1px -1px 3px map-get($estilos, negro);
+}
+
+h1 {
+    align-items: center;
+    font-size: 65px;
+    text-shadow: 2px 1px 3px map-get($estilos, negro);
+    font-family: "saman";
+    border: 0;
+    
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    margin: 50px 0 15px 5%;
+    color: map-get($estilos, negro);
+    text-shadow: none;
+    text-shadow: 2px 1px 3px map-get($estilos, blanco), 0px -0.1px 3px map-get($estilos, blanco);
+}
+
+
+/* Navegador */
+
+nav {
+    width: 95%;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        a{
+            --bs-link-hover-color: map-get($estilos, blanco);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: map-get($estilos, blanco);
+        
+            img {
+                width: 150px;
+                --bs-link-hover-color: map-get($estilos, blanco);
+                }
+        }
+}
+
+
+nav ul li {
+    list-style: none;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 23px;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
+    text-shadow: 7px;
+    a {
+        text-decoration: none;
+        color: map-get($estilos, blanco);
+        text-shadow: 2px 1px 3px map-get($estilos, negro), 0px -0.1px 3px gray;
+        --bs-link-hover-color: map-get($estilos, blanco);
+        
+    }
+}
+
+@mixin size($height, $width){
+    height: $height;
+    width: $width;
+}
+
+nav ul li::before {
+    content: "";
+    @include size(3px, 0%);
+    background: map-get($estilos, blanco);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.4s ease-out;
+    box-shadow: 2px 2px 5px map-get($estilos, negro);
+    
+}
+
+nav ul li:hover::before {
+    width: 100%;
+   
+    
+}
+
+/* Nav-Bootstrap */
+.nav-item{
+    text-decoration: none;
+    color: map-get($estilos, blanco);
+    text-shadow: 2px 1px 3px map-get($estilos, negro), 0px -0.1px 3px map-get($estilos, gris);
+    --bs-link-hover-color: map-get($estilos, blanco);
+}
+
+.bg-light {
+    --bs-bg-opacity: 0;
+}
+
+.navbar-toggler-icon{
+    background-color:orange;
+    border-radius: 4px;
+}
+
+#navbarNav{
+    justify-content: end;
+}
+
+
+
+/* Index */
+
+.contenedorIndex {
+    @include size(100vh, 100%);
+    background-image: url(../assets/background/sumieindexs.jpg);
+    background-size: cover;
+
+}
+
+/* Frase del Index */
+
+.frasesection {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+}
+
+.frasearticle {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: $bordeRedondo;
+    box-shadow: 2px 2px 15px map-get($estilos, gris);
+}
+
+.pindex {
+    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: left;
+
+}
+
+.pmons {
+    font-family: 'Caveat', cursive;
+    font-size: 35px;
+    text-align: right;
+}
+
+/* Tabla */
+
+table {
+    width: 40%;
+    margin: 5% auto 0 auto;
+}
+
+th {
+    background-color: $colorPrincipal;
+    color: map-get($estilos, blanco)
+}
+
+td {
+    background-color: map-get($estilos, blanco);
+}
+
+/* Instructora */
+
+
+.sobremi {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    img {
+        width: 400px;
+        display: block;
+        margin: auto;
+    
+    }
+
+}
+
+
+.parrafos-instructora{
+    width: 60%;
+    background-color: rgba(139, 0, 139, 0.042);
+    padding: 30px;
+    border-radius: $bordeRedondo;
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+
+.maestros{
+    display: flex;
+    justify-content: center;
+    img{
+        // width: 250px;
+        @include size(auto, 250px);
+        border-radius: $bordeRedondo;
+        box-shadow: 1px 1px 2px 1px map-get($estilos, gris);
+        margin-top: 50px;
+        
+    }
+    
+}
+
+.fotosmaestros{
+    display: flex;
+    align-items: flex-end;
+    margin: 50px auto 100px auto;
+}
+
+.nombremaestro{
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    color:indigo
+}
+
+.titulopequeno{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Historia */
+
+.historiaky{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 80px;
+    
+}
+
+.historiaimg{
+    border-radius: $bordeRedondo;
+    width: 500px;
+}
+
+.textofotohistoria{
+margin-left: 50px;
+margin-right: auto;
+font-weight: bold;
+width: 60%;
+    background-color: rgba(139, 0, 139, 0.042);
+    padding: 30px;
+    border-radius: $bordeRedondo;
+    box-shadow: 1px 1px 2px 1px map-get($estilos, gris);
+}
+
+
+/* Contacto */
+
+.contenedorcontacto {
+    @include size(100%, 100%);
+    background-image: url(../assets/background/sumiecontacto.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
+.postfooter {
+    @include size(120px, 100%);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+form {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px map-get($estilos, gris);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.30), rgb(255, 255, 255, 0.30)), url(../assets/background/MANDALAROSA.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    color:azure
+
+}
+
+form legend h2 {
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+.contactomargin {
+    margin-top: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactoradio {
+    display: flex;
+    input {
+        margin-left: 15px;
+    }
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+}
+button {
+    width: 200px;
+    border-radius: $bordeRedondo;
+    margin: 35px 30px 30px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease all;
+    border: 2px solid $colorPrincipal;
+}
+
+button:hover{
+    background: $colorPrincipal;
+}
+
+input{
+    border: 2px solid $colorPrincipal;
+    border-radius: $bordeRedondo;
+}
+
+textarea{
+    border: 2px solid $colorPrincipal;
+    border-radius: $bordeRedondo;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    bottom: 5px;
+    justify-content: center;
+    position: absolute;
+}
+
+footer a img {
+    width: 70px;
+    transition: all 300ms;
+    margin-inline: 15px;
+    bottom: 2px;
+}
+
+footer a img:hover {
+    transform: scale(1.15);
+}
+
+.adorno {
+    height: 65px;
+}
+
+/* Footer Index */
+
+.footerindex {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    justify-items: center;
+}
+
+
+
+
+.insta{
+    width: 65px;
+    bottom: 0;
+    
+}
+
+.face {
+    @extend .insta;
+    margin-bottom: 10px;
+}
+
+.whatsapp{
+    @extend .insta;
+}
