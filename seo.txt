@@ -1,0 +1,3 @@
+Se aplican cambios al SEO en la el meta description, describiendo brevemente en qué conciste cada pagina de manera indicidual.
+EN el meta keyword se aplican las palabras claves referentes al tema de cada pagina y/o contenidas en ella.
+El H1 se mantiene, siendo este la tematica del sitio, el Kundalini Yoga, al igual que el H2 referente a la tematica de cada pagina.
