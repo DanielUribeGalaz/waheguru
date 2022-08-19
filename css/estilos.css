@@ -217,12 +217,13 @@ td {
   color: indigo;
 }
 
-.titulopequeno {
+/* Historia */
+h3 {
   font-size: 20px;
   font-weight: bold;
+  margin-top: 50px;
 }
 
-/* Historia */
 .historiaky {
   display: flex;
   align-items: flex-end;
@@ -235,7 +236,7 @@ td {
   width: 500px;
 }
 
-.textofotohistoria {
+.textofotohistoria, .pqueesky, .pqueesky2 {
   margin-left: 50px;
   margin-right: auto;
   font-weight: bold;
@@ -244,6 +245,17 @@ td {
   padding: 30px;
   border-radius: 9px;
   box-shadow: 1px 1px 2px 1px #808080;
+  text-align: left;
+}
+
+.pqueesky, .pqueesky2 {
+  margin: 40px auto 0 5%;
+  text-align: right;
+}
+
+.pqueesky2 {
+  text-align: center;
+  margin-left: auto;
 }
 
 /* Contacto */
@@ -368,4 +380,133 @@ footer a img:hover {
 
 .face {
   margin-bottom: 10px;
+}
+
+
+
+Media Queries
+ @media only screen and (max-width:768px){
+
+ }
+
+@media only screen and (max-width:576px){
+
+    /* General */
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 5%;
+        width: 90%;
+    }
+
+
+    nav ul {
+        justify-content: space-around;
+        text-align: center;
+        width: 90%;
+
+    }
+
+    nav a img {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* Index */
+
+
+
+    .frasesection {
+        margin: 0px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+.frasearticle {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 9px;
+    box-shadow: 2px 2px 15px grey;
+}
+
+.pindex {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+
+.pmons {
+    font-size: 25px;
+    text-align: center;
+}
+
+    /* Clases */
+
+    table {
+        width: 100%;
+        margin: 10% 0 0 0;
+    }
+
+    /* Instructora */
+
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobremi img{
+        margin-bottom: 40px;
+    }
+
+    .maestros{
+        display: flex;
+        flex-direction: column;       
+    }
+
+    .parrafos-instructora{
+        text-align: center;
+        width: 90%;      
+    }
+
+    /* Historia */
+
+    .historiaimg {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .historiaky{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+    /* Contacto */
+
+    form {
+        width: 85%;
+    }
+
+    /*  Footer    */
+
+    .adorno{
+        height: 0px;
+        width: 0px;
+    }
 }/*# sourceMappingURL=estilos.css.map */
